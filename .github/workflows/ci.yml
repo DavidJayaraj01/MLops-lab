@@ -1,0 +1,24 @@
+name: Continuous Integration Lab
+
+on:
+push:
+branches: [ &quot;main&quot; ]
+pull_request:
+branches: [ &quot;main&quot; ]
+jobs:
+build:
+runs-on: ubuntu-latest
+steps:
+- name: Checkout source code
+uses: actions/checkout@v3
+- name: Set up Python
+uses: actions/setup-python@v4
+with:
+python-version: &#39;3.9&#39;
+- name: Install dependencies
+run: |
+pip install --upgrade pip
+pip install -r requirements.txt
+- name: Run tests
+run: |
+pytest

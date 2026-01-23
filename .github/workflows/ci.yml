@@ -2,9 +2,9 @@ name: Continuous Integration Lab
 
 on:
 push:
-branches: [ &quot;main&quot; ]
+branches: [ "main" ]
 pull_request:
-branches: [ &quot;main&quot; ]
+branches: [ "main" ]
 jobs:
 build:
 runs-on: ubuntu-latest
